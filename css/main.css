@@ -268,7 +268,9 @@ ol.listDecimalCh {list-style-type: cjk-ideographic;}
 .item_dot:before {content: "·"; margin-right: 12px; -moz-transform: scale(4) translate(1px, -1px); -o-transform: scale(4) translate(1px, -1px); -webkit-transform: scale(4) translate(1px, -1px); transform: scale(4) translate(1px, -1px); display: inline-block;}
 .parentheses:before {content: "("; padding-left: 1px;}
 .parentheses:after {content: ")"; padding-right: 1px;}
-.parentheses:last-child:after {padding-right: 0;}
+.parentheses:last-child:after, .tilde:last-child:after {padding-right: 0;}
+.tilde:after {content: "～"; padding: 0 1px;}
+.tilde:last-child:after {content: "";}
 
 .arrow, .arrow>.svg-inline--fa {width: 1.25em; display: inline-block;}
 .arrow::before, .arrow>i[data-fa-pseudo-element=":before"] {content: ""; display: none;}

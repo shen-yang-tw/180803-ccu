@@ -9,7 +9,7 @@ $(document).ready(function() {
   //Remove parent if child empty
   $("p:empty, h1:empty, h2:empty, h3:empty, h4:empty, h5:empty, h6:empty").parent(":empty").remove();
   //Remove if empty
-  $("p:empty, h1:empty, h2:empty, h3:empty, h4:empty, h5:empty, h6:empty").remove();
+  $("p:empty, h1:empty, h2:empty, h3:empty, h4:empty, h5:empty, h6:empty, .ifEmpty:empty").remove();
 
   //Dropdown button addClass.btn_secondary
   $(".uk-nav-dropdown li").parent().parent().siblings().removeClass("btn_secondary");
