@@ -16,12 +16,14 @@ $(document).ready(function() {
   $(".uk-nav-dropdown li.uk-active").parent().parent().siblings().addClass("btn_secondary");
 
   //c3.chart
-
   var chart = c3.generate({
     data: {
       columns: [
-        ['data1', 30],
-        ['data2', 120],
+        ["教育活動", 62],
+        ["學術活動", 30],
+        ["藝文活動", 5],
+        ["育樂活動", 3],
+        ["其它", 0]
       ],
       type: 'donut',
       onclick: function(d, i) {
@@ -58,7 +60,15 @@ $(document).ready(function() {
     chart.unload({
       ids: 'data2'
     });
+    chart.unload({
+      ids: 'data3'
+    });
+    chart.unload({
+      ids: 'data4'
+    });
+    chart.unload({
+      ids: 'data5'
+    });
   }, 2500);
-
 
 });
