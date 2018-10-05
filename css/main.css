@@ -491,6 +491,7 @@ textarea {min-height: 100px;}
     .text_center_mL, .text_center_mxL, .text_center_mLxR {text-align: left;}
     .text_mR, .text_center_mR, .text_center_mxR {text-align: right;}
     .table_rwd td {display: table-cell;}
+    .min_heightM600 {min-height: 600px;}
     .min_height100vhM {min-height: 100vh}
     .widthautoM {width: auto !important;}
 }

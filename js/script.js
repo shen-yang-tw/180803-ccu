@@ -72,3 +72,37 @@ $(document).ready(function() {
   }, 2500);
 
 });
+
+$(window).on("resize load", function() {
+
+  //keep aspect ratio of image's height to width
+  $(".ratio3_4 li img, .thisRatio3_4").each(function() {
+    $(this).css({
+      height: $(this).width() * 4 / 3
+      //portrait
+    });
+  });
+  $(".ratio9_16 li img, .thisRatio9_16").each(function() {
+    $(this).css({
+      height: $(this).width() * 16 / 9
+      //portrait
+    });
+  });
+  $(".ratio4_3 li img, .thisRatio4_3").each(function() {
+    $(this).css({
+      height: $(this).width() * 3 / 4
+      //landscape
+    });
+  });
+  $(".ratio16_9 li img, .thisRatio16_9").each(function() {
+    $(this).css({
+      height: $(this).width() * 9 / 16
+      //landscape
+    });
+  });
+  $(".ratio1_1 li img, .thisRatio1_1").each(function() {
+    $(this).css({
+      height: $(this).width()
+    });
+  });
+});
