@@ -447,25 +447,69 @@ textarea {min-height: 100px;}
 
 /* monthly Style
 ---------------------------------------------------- */
-
-.monthly-today .monthly-day-number {min-width: 30px; min-height: 30px; top: 5.5px; left: 5.5px;}
-.monthly-header-title-date .year {font-size: 0.5rem;}
-@media (min-width: 25em) {
-    .monthly {font-size: 0.8em;}
-    .monthly-day, .monthly-day-blank {padding: 0;}
-    .monthly, .monthly-day-blank {background: #f0f6f9;}
-    .monthly-event-list {background: rgba(240, 246, 249, 0.9);}
-    .monthly-header-title a:hover {background: #bcc4c7; border: 1px solid #bcc4c7; color: #444;}
-    .monthly-header-title a:link, .monthly-header-title a:visited, .monthly-header-title a:hover, .monthly-header-title-date, .monthly-header-title-date:hover {border-color: #bcc4c7;}
-    .monthly-header-title-date {display: block !important;}
-    .monthly-prev:after, .monthly-next:after {border-color: #3d515a;}
-    .monthly-list-item, .monthly-day-title-wrap {border-color: #cbd2d6;}
-    .monthly-event-list-date {top: inherit;}
-    .monthly-day .monthly-event-indicator span {margin: 2px;}
-    .monthly-day-event>.monthly-indicator-wrap {margin-top: 45px;}
-    .monthly-day-event>.monthly-day-number {top: 4px; left: 4px;}
+.monthly-today .monthly-day-number {
+  min-width: 30px;
+  min-height: 30px;
+  top: 5.5px;
+  left: 5.5px;
 }
-
+.monthly-header-title-date .year {
+    font-size: 0.5rem;
+    line-height: 1;
+}
+.monthly-list-item a:link, .monthly-list-item a:visited {
+    text-decoration: none;
+    color: white !important;
+}
+.monthly-list-item a:hover {
+    color: black !important;
+}
+@media (min-width: 25em) {
+.monthly {
+    font-size: 0.8em;
+}
+.monthly-day, .monthly-day-blank {
+    padding: 0;
+}
+.monthly, .monthly-day-blank {
+    background: #f0f6f9;
+}
+.monthly-event-list {
+    background: rgba(240, 246, 249, 0.9);
+}
+.monthly-header-title a:hover {
+    background: #EEF3F5;
+}
+.monthly-header-title a:link,
+.monthly-header-title a:visited, .monthly-header-title a:hover, .monthly-header-title-date,
+.monthly-header-title-date:hover {
+	background: #f1f7fa;
+    border-color: #EEF3F5;
+}
+.monthly-header-title-date {
+    /*display: block !important;*/
+}
+.monthly-prev:after,
+.monthly-next:after {
+  border-color: #3d515a;
+}
+.monthly-list-item, .monthly-day-title-wrap {
+    border-color: #cbd2d6;
+}
+.monthly-event-list-date {
+    top: inherit;
+}
+.monthly-day .monthly-event-indicator span {
+    margin: 2px;
+}
+.monthly-day-event>.monthly-indicator-wrap {
+    margin-top: 45px;
+}
+.monthly-day-event>.monthly-day-number {
+    top: 4px;
+    left: 4px;
+}
+}
 /* End monthly Style
 ---------------------------------------------------- */
 
@@ -515,8 +559,11 @@ textarea {min-height: 100px;}
     .monthly_large .monthly-header-title {font-size: 1.5em; margin-top: 13px;}
     .monthly_large .monthly-header-title a:link {margin: 0; font-size: inherit;}
     .monthly_large .monthly-prev:after, .monthly_large .monthly-next:after {width: 1em; height: 1em;}
-    .monthly_large .monthly-day .monthly-event-indicator span {font-size: 1.3em; line-height: 1.2em;}
+    .monthly_large .monthly-day .monthly-event-indicator {height: auto; max-height: 150px;}
+    .monthly_large .monthly-day .monthly-event-indicator:after { content: ""; text-align: right; position: absolute; bottom: 0; right: 0; width: 100%; height: 5px; pointer-events: none;}
+    .monthly_large .monthly-day .monthly-event-indicator span {font-size: 1.3em; line-height: 1.2em; white-space: normal; text-align: justify; margin: 0; padding: 2px 5px;}
     .monthly_large .monthly-event-list {top: 6em; height: calc(100% - 6em - 5px);}
+    .monthly-day-event>.monthly-indicator-wrap {margin-top: 25px;}
 
     /* End monthly Style
 ---------------------------------------------------- */

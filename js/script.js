@@ -15,61 +15,33 @@ $(document).ready(function() {
   $(".uk-nav-dropdown li").parent().parent().siblings().removeClass("btn_secondary");
   $(".uk-nav-dropdown li.uk-active").parent().parent().siblings().addClass("btn_secondary");
 
-  //c3.chart
-  var chart = c3.generate({
-    data: {
-      columns: [
-        ["教育活動", 62],
-        ["學術活動", 30],
-        ["藝文活動", 5],
-        ["育樂活動", 3],
-        ["其它", 0]
-      ],
-      type: 'donut',
-      onclick: function(d, i) {
-        console.log("onclick", d, i);
+  //calendar - https://github.com/kthornbloom/Monthly/wiki/Events
+  var A1 = {
+    "monthly": [{
+        "id": 1,
+        "name": "大得象功個土會代之題速越眼",
+        "startdate": "2019-4-18",
+        "enddate": "2019-4-19",
+        "color": "#3093CC",
+        "url": "#"
       },
-      onmouseover: function(d, i) {
-        console.log("onmouseover", d, i);
-      },
-      onmouseout: function(d, i) {
-        console.log("onmouseout", d, i);
+      {
+        "id": 2,
+        "name": "本日閉館",
+        "startdate": "2019-4-29",
+        "color": "#ee7502",
+        "url": "#"
       }
-    },
-    donut: {
-      title: "100%"
-    }
+    ]
+  };
+  $('#calendar').monthly({
+    mode: 'event',
+    // dataType: 'xml',
+    // xmlUrl: 'events.xml',
+    dataType: 'json',
+    // jsonUrl: 'events.json',
+    events: A1
   });
-
-  setTimeout(function() {
-    chart.load({
-      columns: [
-        ["教育活動", 62],
-        ["學術活動", 30],
-        ["藝文活動", 5],
-        ["育樂活動", 3],
-        ["其它", 0]
-      ]
-    });
-  }, 1500);
-
-  setTimeout(function() {
-    chart.unload({
-      ids: 'data1'
-    });
-    chart.unload({
-      ids: 'data2'
-    });
-    chart.unload({
-      ids: 'data3'
-    });
-    chart.unload({
-      ids: 'data4'
-    });
-    chart.unload({
-      ids: 'data5'
-    });
-  }, 2500);
 
 });
 

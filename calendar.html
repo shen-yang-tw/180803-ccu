@@ -15,7 +15,6 @@
   <link rel="stylesheet" href="css/components/accordion.almost-flat.min.css">
   <link rel="stylesheet" href="css/components/dotnav.almost-flat.min.css">
   <link rel="stylesheet" href="css/components/form-advanced.almost-flat.min.css">
-  <link rel="stylesheet" href="css/components/form-password.almost-flat.min.css">
   <link rel="stylesheet" href="css/components/form-file.almost-flat.min.css">
   <link rel="stylesheet" href="css/components/sticky.almost-flat.min.css">
   <link rel="stylesheet" href="css/components/slider.min.css">
@@ -23,7 +22,6 @@
   <link rel="stylesheet" href="css/components/slideshow.min.css">
   <link rel="stylesheet" href="css/fontawesome-5.2.0-all.min.css">
   <link rel="stylesheet" href="css/fontawesome-5.2.0-svg-with-js.min.css">
-  <link rel="stylesheet" href="css/c3.min.css">
   <link rel="stylesheet" href="css/animate-3.6.css">
   <link rel="stylesheet" href="css/monthly.css">
   <link rel="stylesheet" href="css/main.css">
@@ -57,14 +55,17 @@
         <div class="pl-md-3 py-md-2 uk-width-large-3-4 uk-hidden-medium">
           <div class="h-100 uk-grid uk-grid-small" data-uk-grid-margin>
             <div class="uk-width-large-1-2 uk-vertical-align">
-              <div class="w-100 uk-vertical-align-middle"><h2 class="fontSizeH1 color_primary font-weight-bold m-0 text-center text-md-left py-1">智慧化圖書館活動管理系統</h2></div>
+              <div class="w-100 uk-vertical-align-middle">
+                <h2 class="fontSizeH1 color_primary font-weight-bold m-0 text-center text-md-left py-1">智慧化圖書館活動管理系統</h2>
+              </div>
             </div>
             <div class="uk-width-large-1-2">
               <nav>
                 <ul class="topList list_horizontal list_vline uk-text-right uk-visible-large">
                   <li><a class="hover_color_secondary" href="#" title="#">學校首頁</a></li>
                   <li><a class="hover_color_secondary" href="#" title="#">圖書館首頁</a></li>
-                  <li><a class="color_secondary" href="#" title="#">許小飛</a></li>
+                  <li><a class="hover_color_secondary" href="#login" title="登入" data-uk-modal="{center:true}">登入</a></li>
+                  <li><a class="hover_color_secondary" href="#register" title="註冊" data-uk-modal="{center:true}">註冊</a></li>
                 </ul>
               </nav>
             </div>
@@ -89,6 +90,8 @@
           <li class="uk-nav-divider"></li>
           <li><a href="#" title="#">學校首頁</a></li>
           <li><a href="#" title="#">圖書館首頁</a></li>
+          <li><a href="#login" title="登入" data-uk-modal="{center:true}">登入</a></li>
+          <li><a href="#register" title="註冊" data-uk-modal="{center:true}">註冊</a></li>
         </ul>
       </nav>
     </div>
@@ -114,10 +117,10 @@
           <a class="fontSize1_2 font-weight-bold px-3 py-2" href="#" title="#">最新消息</a>
         </div>
         <div class="uk-button-dropdown" data-uk-dropdown>
-          <a class="fontSize1_2 font-weight-bold px-3 py-2" href="#" title="#">行事曆</a>
+          <a class="active fontSize1_2 font-weight-bold px-3 py-2" href="#" title="#">行事曆</a>
         </div>
         <div class="uk-button-dropdown" data-uk-dropdown>
-          <a class="fontSize1_2 font-weight-bold px-3 py-2 active" href="#" title="#">我的活動</a>
+          <a class="fontSize1_2 font-weight-bold px-3 py-2" href="#" title="#">我的活動</a>
         </div>
       </nav>
       <!-- .dropdownMenu_center -->
@@ -125,219 +128,70 @@
     <!-- .menuBar -->
   </header>
   <div class="bg_img">
-    <div class="min_height100vhL py-3 bg_white uk-container uk-container-center">
-      <div class="uk-clearfix">
-        <ul class="uk-breadcrumb uk-align-left">
-          <li><a href="#" title="#">Home</a></li>
-          <li><a href="#" title="#">Blog</a></li>
-          <li><span>Category</span></li>
-          <li class="uk-active"><span>Post</span></li>
-        </ul>
-        <a class="color_secondary uk-margin-bottom uk-align-right uk-hidden-large" href="#" title="#">帳號：<span>a123</span></a>
+    <div class="p-0 uk-container uk-container-center">
+      <!-- <img class="uk-width-1-1" src="img/banner.jpg" alt="#" title="#"> -->
+      <div class="fullImageBG_slideshow">
+        <div class="uk-slidenav-position" data-uk-slideshow="{autoplay:true, autoplayInterval:'7000'}">
+          <!-- data-uk-slideshow="{autoplay:true, autoplayInterval:'7000'}" -->
+          <ul class="uk-slideshow uk-overlay-active">
+            <li>
+              <div class="uk-cover-background" style="background-image: url(img/banner.jpg);">
+                <img class="uk-invisible" src="img/blank.gif" width="10" height="10" alt="#" title="#">
+              </div>
+              <a class="uk-overlay-panel" href="#" aria-label="#"></a>
+              <!-- <div class="uk-overlay-panel uk-text-center uk-overlay-background uk-overlay-fade uk-overlay-bottom uk-position-z-index">Slide1</div> -->
+            </li>
+            <li>
+              <div class="uk-cover-background" style="background-image: url(https://picsum.photos/1280/400?image=600);">
+                <img class="uk-invisible" src="img/blank.gif" width="10" height="10" alt="#" title="#">
+              </div>
+              <a class="uk-overlay-panel" href="#" aria-label="#"></a>
+              <!-- <div class="uk-overlay-panel uk-text-center uk-overlay-background uk-overlay-fade uk-overlay-bottom uk-position-z-index">Slide2</div> -->
+            </li>
+            <li>
+              <div class="uk-cover-background" style="background-image: url(https://picsum.photos/1280/400?image=700);">
+                <img class="uk-invisible" src="img/blank.gif" width="10" height="10" alt="#" title="#">
+              </div>
+              <a class="uk-overlay-panel" href="#" aria-label="#"></a>
+              <!-- <div class="uk-overlay-panel uk-text-center uk-overlay-background uk-overlay-fade uk-overlay-bottom uk-position-z-index">Slide3</div> -->
+            </li>
+          </ul>
+          <a href="" class="uk-slidenav uk-slidenav-contrast uk-slidenav-previous" title="#" aria-label="previous" data-uk-slideshow-item="previous"></a>
+          <a href="" class="uk-slidenav uk-slidenav-contrast uk-slidenav-next" title="#" aria-label="next" data-uk-slideshow-item="next"></a>
+          <ul class="uk-dotnav uk-dotnav-contrast uk-position-bottom uk-flex-center">
+            <li data-uk-slideshow-item="0"><a href="#" title="#" aria-label="Slide1"></a></li>
+            <li data-uk-slideshow-item="1"><a href="#" title="#" aria-label="Slide2"></a></li>
+            <li data-uk-slideshow-item="2"><a href="#" title="#" aria-label="Slide3"></a></li>
+          </ul>
+        </div>
       </div>
-      <div class="uk-grid uk-grid-small" data-uk-grid-match="{target:'.uk-panel'}" data-uk-grid-margin>
-        <div class="uk-width-large-1-2">
-          <h3 class="color_primary"><i class="far fa-address-book fa-fw"></i>個人基本資料</h3>
-          <div class="uk-panel uk-panel-box">
-            <div class="uk-grid uk-grid-small" data-uk-grid-margin>
-              <div class="uk-width-small-1-4 uk-width-medium-1-3 uk-width-large-1-4"><img class="w-100 uk-thumbnail" src="img/man-user.svg" alt="個人照"></div>
-              <div class="uk-width-small-3-4 uk-width-medium-2-3 uk-width-large-3-4">
-                <form class="uk-form">
-                  <div class="uk-grid uk-grid-collapse" data-uk-grid-margin>
-                    <div class="uk-width-small-1-4">
-                      <label class="mt-md-1 uk-form-label" for="input_name">姓名</label>
-                    </div>
-                    <div class="mb-2 uk-width-small-3-4">
-                      <input id="input_name" class="w-100" type="text" placeholder="許小飛" value="許小飛">
-                    </div>
-                    <div class="uk-width-small-1-4">
-                      <label class="mt-md-1 uk-form-label" for="input_account">帳號</label>
-                    </div>
-                    <div class="mb-2 uk-width-small-3-4">
-                      <input id="input_account" class="w-100" type="text" placeholder="fly001" value="fly001">
-                    </div>
-                    <div class="uk-width-small-1-4">
-                      <label class="mt-md-1 uk-form-label" for="input_password">密碼</label>
-                    </div>
-                    <div class="mb-2 uk-width-small-3-4">
-                      <div class="w-100 uk-form-password">
-                        <input id="input_password" class="w-100" type="password" value="12345">
-                        <a href="" class="uk-form-password-toggle" data-uk-form-password="{lblShow:'顯示', lblHide:'隱藏'}">顯示</a>
-                      </div>
-                    </div>
-                    <div class="uk-width-small-1-4">
-                      <label class="mt-md-1 uk-form-label" for="identity">身分</label>
-                    </div>
-                    <div class="mb-2 uk-width-small-3-4">
-                      <select id="identity" class="w-100" disabled>
-                      <option selected="selected">學生</option>
-                    </select>
-                    </div>
-                    <div class="uk-width-small-1-4">
-                      <label class="mt-md-1 uk-form-label" for="input_phone">連絡電話</label>
-                    </div>
-                    <div class="mb-2 uk-width-small-3-4">
-                      <input id="input_phone" class="w-100" type="text" placeholder="0912345678" value="0912345678">
-                    </div>
-                    <div class="uk-width-small-1-4">
-                      <label class="mt-md-1 uk-form-label" for="input_mail">信箱</label>
-                    </div>
-                    <div class="mb-2 uk-width-small-3-4">
-                      <input id="input_mail" class="w-100" type="text" placeholder="abc@flysheet.com.tw" value="abc@flysheet.com.tw">
-                    </div>
-                    <div class="uk-width-medium-3-4 uk-push-1-4">
-                      <button class="btn_secondary px-4 w-100 uk-button" type="button">修　　改</button>
-                    </div>
-                  </div>
-                </form>
+      <!-- .fullImageBG_slideshow -->
+      <div class="bg_secondary">
+        <form class="p-2 uk-form uk-container-center uk-width-large-4-5">
+          <div class="uk-grid uk-grid-small" data-uk-grid-margin>
+            <div class="uk-width-4-10 uk-width-small-2-10">
+              <select class="text-light bg-transparent border-white uk-width-1-1">
+                <option class="fontSize1 text-dark">活動類型</option>
+                <option class="fontSize1 text-dark">資料庫</option>
+                <option class="fontSize1 text-dark">電子書</option>
+                <option class="fontSize1 text-dark">電子期刊</option>
+                <option class="fontSize1 text-dark">網路資源</option>
+              </select>
+            </div>
+            <div class="uk-width-5-10 uk-width-small-7-10">
+              <input class="border-0 uk-width-1-1" type="text" placeholder="">
+            </div>
+            <div class="uk-width-1-10 uk-vertical-align">
+              <div class="uk-vertical-align-middle">
+                <a class="fontSizeM1_4 text-light bg-transparent border-0 h-100 uk-width-1-1" href="#" aria-label="search" role="button"><i class="fas fa-search"></i></a>
               </div>
             </div>
           </div>
-        </div>
-        <div class="uk-width-large-1-2">
-          <h3 class="color_primary"><i class="far fa-calendar-check fa-fw"></i>我的活動</h3>
-          <div id="act" class="uk-panel uk-panel-box">
-            <ul class="uk-tab" data-uk-tab="{connect:'#activities'}">
-              <li><a href="#">已選擇活動</a></li>
-              <li><a href="#">歷史活動</a></li>
-              <li><a href="#">推薦活動</a></li>
-            </ul>
-            <ul id="activities" class="bg-white min_height100 p-2 m-0 border border-top-0 rounded-bottom uk-switcher uk-margin">
-              <li>
-                <ul class="uk-list uk-list-line">
-                  <li data-uk-alert>
-                    <div class="uk-grid uk-grid-small" data-uk-grid-margin>
-                      <div class="uk-width-2-6 uk-width-small-1-5 uk-width-medium-1-6 uk-width-large-1-6 uk-width-xlarge-1-5">
-                        <div class="color_primary p-1 text-center uk-panel uk-panel-box">
-                          <div class="font-weight-bold text-black-50">16-18</div>
-                          <hr class="m-0">
-                          <div class="font-weight-bold text-black-50">Aug</div>
-                        </div>
-                      </div>
-                      <div class="uk-vertical-align uk-width-4-6 uk-width-small-2-5 uk-width-medium-4-6 uk-width-large-3-6 uk-width-xlarge-3-5">
-                        <div class="uk-vertical-align-middle">
-                          <h4 class="fontSize1"><a class="color_secondary" href="#">新世代自動化圖書管理與加值服務研討會</a></h4>
-                        </div>
-                      </div>
-                      <div class="uk-vertical-align uk-width-small-2-5 uk-width-medium-1-6 uk-width-large-2-6 uk-width-xlarge-1-5">
-                        <div class="uk-vertical-align-middle">
-                          <button class="w-100 uk-button" data-uk-modal="{target:'#confirm1', center:true}">我要取消</button>
-                          <div id="confirm1" class="uk-modal">
-                            <div class="uk-modal-dialog">
-                              <a href="" class="uk-modal-close uk-close" title="關閉" aria-label="關閉"></a>
-                              <div class="uk-modal-header"><h4>確定取消？</h4></div>
-                              <div class="uk-grid uk-grid-small uk-grid-width-1-2" data-uk-grid-margin>
-                                <div><button class="btn_primary w-100 uk-button uk-button-large uk-alert-close uk-modal-close">確　　定</button></div>
-                                <div><button class="btn_secondary w-100 uk-button uk-button-large uk-modal-close">關　　閉</button></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li data-uk-alert>
-                    <div class="uk-grid uk-grid-small" data-uk-grid-margin>
-                      <div class="uk-width-2-6 uk-width-small-1-5 uk-width-medium-1-6 uk-width-large-1-6 uk-width-xlarge-1-5">
-                        <div class="color_primary p-1 text-center uk-panel uk-panel-box">
-                          <div class="font-weight-bold text-black-50">16-18</div>
-                          <hr class="m-0">
-                          <div class="font-weight-bold text-black-50">Aug</div>
-                        </div>
-                      </div>
-                      <div class="uk-vertical-align uk-width-4-6 uk-width-small-2-5 uk-width-medium-4-6 uk-width-large-3-6 uk-width-xlarge-3-5">
-                        <div class="uk-vertical-align-middle">
-                          <h4 class="fontSize1"><a class="color_secondary" href="#">銀不有又管學利用地不而力腳兒計政過場機動究容，頭我運，小小是候的理日最輪傳歷，業快刻企女小身樣那</a></h4>
-                        </div>
-                      </div>
-                      <div class="uk-vertical-align uk-width-small-2-5 uk-width-medium-1-6 uk-width-large-2-6 uk-width-xlarge-1-5">
-                        <div class="uk-vertical-align-middle">
-                          <button class="w-100 uk-button" data-uk-modal="{target:'#confirm2', center:true}">我要取消</button>
-                          <div id="confirm2" class="uk-modal">
-                            <div class="uk-modal-dialog">
-                              <a href="" class="uk-modal-close uk-close" title="關閉" aria-label="關閉"></a>
-                              <div class="uk-modal-header"><h4>確定取消？</h4></div>
-                              <div class="uk-grid uk-grid-small uk-grid-width-1-2" data-uk-grid-margin>
-                                <div><button class="btn_primary w-100 uk-button uk-button-large uk-alert-close uk-modal-close">確　　定</button></div>
-                                <div><button class="btn_secondary w-100 uk-button uk-button-large uk-modal-close">關　　閉</button></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li data-uk-alert>
-                    <div class="uk-grid uk-grid-small" data-uk-grid-margin>
-                      <div class="uk-width-2-6 uk-width-small-1-5 uk-width-medium-1-6 uk-width-large-1-6 uk-width-xlarge-1-5">
-                        <div class="color_primary p-1 text-center uk-panel uk-panel-box">
-                          <div class="font-weight-bold text-black-50">16-18</div>
-                          <hr class="m-0">
-                          <div class="font-weight-bold text-black-50">Aug</div>
-                        </div>
-                      </div>
-                      <div class="uk-vertical-align uk-width-4-6 uk-width-small-2-5 uk-width-medium-4-6 uk-width-large-3-6 uk-width-xlarge-3-5">
-                        <div class="uk-vertical-align-middle">
-                          <h4 class="fontSize1"><a class="color_secondary" href="#">新世代自動化圖書管理與加值服務研討會</a></h4>
-                        </div>
-                      </div>
-                      <div class="uk-vertical-align uk-width-small-2-5 uk-width-medium-1-6 uk-width-large-2-6 uk-width-xlarge-1-5">
-                        <div class="uk-vertical-align-middle">
-                          <button class="w-100 uk-button" data-uk-modal="{target:'#confirm3', center:true}">我要取消</button>
-                          <div id="confirm3" class="confirm uk-modal">
-                            <div class="uk-modal-dialog">
-                              <a href="" class="uk-modal-close uk-close" title="關閉" aria-label="關閉"></a>
-                              <div class="uk-modal-header"><h4>確定取消？</h4></div>
-                              <div class="uk-grid uk-grid-small uk-grid-width-1-2" data-uk-grid-margin>
-                                <div><button class="btn_primary w-100 uk-button uk-button-large uk-alert-close uk-modal-close">確　　定</button></div>
-                                <div><button class="btn_secondary w-100 uk-button uk-button-large uk-modal-close">關　　閉</button></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </li>
-              <li>Tab2</li>
-              <li>Tab3</li>
-            </ul>
-          </div>
-        </div>
+        </form>
       </div>
-      <h3 class="color_primary"><i class="fas fa-chart-pie fa-fw"></i>活動統計</h3>
-      <div class="uk-panel uk-panel-box">
-        <div class="uk-grid uk-grid-small uk-grid-divider" data-uk-grid-margin>
-          <div class="uk-width-medium-1-2">
-            <h4>▪ 數據統計</h4>
-            <div class="uk-grid uk-grid-small uk-grid-width-1-2" data-uk-grid-margin>
-              <div>
-                <div class="card">
-                  <img class="card-img-top" src="img/data1.png" alt="Card image cap">
-                  <div class="card-body p-2 p-md-3">
-                    <h4 class="card-text uk-flex uk-flex-middle"><span class="border p-1 uk-text-small">總場次</span><span class="color_secondary font-weight-bold"><span>6</span>場次</span>
-                    </h4>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div class="card">
-                  <img class="card-img-top" src="img/data2.png" alt="Card image cap">
-                  <div class="card-body p-2 p-md-3">
-                    <h4 class="card-text uk-flex uk-flex-middle"><span class="border p-1 uk-text-small">總時數</span><span class="color_secondary font-weight-bold"><span>12</span>小時</span>
-                    </h4>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="uk-width-medium-1-2">
-            <h4>▪ 類型分析</h4>
-            <div id="chart"></div>
-          </div>
-        </div>
-      </div>
+    </div>
+    <div class="min_heightL300 py-3 bg_white uk-container uk-container-center">
+      <div id="calendar" class="monthly monthly_large uk-margin-bottom"></div>
     </div>
     <!-- .uk-container -->
   </div>
@@ -360,12 +214,6 @@
     </div>
   </footer>
   <!-- footer -->
-  <div id="map" class="uk-modal">
-    <div class="uk-modal-dialog">
-      <a href="" class="uk-modal-close uk-close" title="關閉" aria-label="關閉"></a>
-      <img class="mt-4 uk-width-1-1" src="https://fakeimg.pl/800/" alt="#">
-    </div>
-  </div>
   <div id="login" class="uk-modal">
     <div class="uk-modal-dialog">
       <a href="" class="uk-modal-close uk-close" title="關閉" aria-label="關閉"></a>
@@ -493,9 +341,7 @@
   <script src="js/core/dropdown.min.js"></script>
   <script src="js/core/modal.min.js"></script>
   <script src="js/core/tab.min.js"></script>
-  <script src="js/core/utility.min.js"></script>
   <script src="js/components/accordion.min.js"></script>
-  <script src="js/components/form-password.min.js"></script>
   <script src="js/components/grid.min.js"></script>
   <script src="js/components/lightbox.min.js"></script>
   <script src="js/components/sticky.min.js"></script>
@@ -504,11 +350,8 @@
   <script src="js/components/slideshow.min.js "></script>
   <script src="js/components/slideshow-fx.min.js "></script>
   <script src="js/fontawesome-5.2.0-all.min.js "></script>
-  <script src="https://d3js.org/d3.v5.min.js"></script>
-  <script src="js/c3.min.js "></script>
   <script src="js/monthly.js "></script>
   <script src="js/mobile-chrome-vh-fix.js"></script>
-  <script src="js/chart.js "></script>
   <script src="js/script.js "></script>
 </body>
 

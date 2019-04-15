@@ -55,6 +55,9 @@ header.uk-active {box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;}
 #chart {margin-top: 10%; margin-bottom: 10% !important;}
 #chart svg {transform: scale(1.2);}
 
+.monthly-list-item a:hover {color: white !important; font-weight: bolder;}
+.monthly_large .monthly-day .monthly-event-indicator {height: auto; max-height: 150px; background: #ee7502;}
+
 footer, footer a {color: white !important;}
 
 /* Uikit Style
