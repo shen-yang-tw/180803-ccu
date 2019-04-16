@@ -51,7 +51,7 @@ a.color_secondary:hover, a.color_secondary:hover>*, .color_secondary a:hover {co
 .nav_side.nav_side_secondary .uk-nav li a:hover, .nav_side.nav_side_secondary .uk-nav>li.uk-active>a {background: #ee7502;}
 
 header.uk-active {box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;}
-.uk-slideshow>li>.uk-cover-background {height: 350px;}
+.uk-slideshow>li>.uk-cover-background {height: 150px; background-size: 100% 100%;}
 #chart {margin-top: 10%; margin-bottom: 10% !important;}
 #chart svg {transform: scale(1.2);}
 
@@ -74,6 +74,7 @@ footer, footer a {color: white !important;}
 
 /*uk-small*/
 @media (min-width:480px) {
+.uk-slideshow>li>.uk-cover-background {height: 250px;}
 }
 
 /*bs-sm*/
@@ -90,6 +91,7 @@ footer, footer a {color: white !important;}
 .listTabs .uk-grid-divider.uk-grid-width-large-1-1>li:nth-child(even) {border-right: 0;}
 .bg_primary .max_height:after {background: linear-gradient(to top, #3093CC 85%, rgba(255, 255, 255, 0) 100%);}
 .bg_secondary .max_height:after {background: linear-gradient(to top, #ee7502 85%, rgba(255, 255, 255, 0) 100%);}
+.uk-slideshow>li>.uk-cover-background {height: 350px;}
 }
 
 /*bs-lg*/
