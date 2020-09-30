@@ -58,6 +58,15 @@ header.uk-active {box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;}
 .monthly-list-item a:hover {color: white !important; font-weight: bolder;}
 .monthly_large .monthly-day .monthly-event-indicator {height: auto; max-height: 150px; background: #ee7502;}
 
+.opacity {opacity: .8;}
+.hover\:opacity-100:hover {opacity: 1; transition: none; box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;}
+.icon {width: calc(100%/6);}
+.icon img {width: 100%;}
+/* @media (min-width:480px) {.icon {width: calc(100%/12 - 5px);}}
+@media (min-width:768px) {.icon {width: calc(100%/12 - 5px);}} */
+@media (min-width:960px) {.icon {width: calc(100%/12);}}
+@media (min-width:1220px) {}
+
 footer, footer a {color: white !important;}
 
 /* Uikit Style
